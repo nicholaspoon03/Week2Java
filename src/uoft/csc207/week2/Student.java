@@ -5,6 +5,8 @@ package uoft.csc207.week2;
  */
 
 public class Student extends Person {
+    private final String studentNumber;
+
     /**
      * Return a string representation of this person with this format:
      * 'last name, other names: utorid'
@@ -13,7 +15,7 @@ public class Student extends Person {
      */
     @Override
     public String toString() {
-        return "Student: " + super.toString();
+        return "Student: " + super.toString() + " " + this.studentNumber;
     }
 
     /**
@@ -21,8 +23,10 @@ public class Student extends Person {
      *
      * @param name   the person's name (family name last)
      * @param utorid the person's UTORid
+     * @param stuNum the 10-digit student number
      */
-    Student(String[] name, String utorid) {
+    Student(String[] name, String utorid, String stuNum) {
         super(name, utorid);
+        this.studentNumber = stuNum;
     }
 }
